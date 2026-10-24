@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arte Circular · Miniaturas de autor</title>
+<meta name="description" content="Miniaturas de autor de 28 a 32 mm para juegos de rol y de mesa, impresas en resina y pintadas a mano por jóvenes del Sector Cuba, Pereira. Escuela de Escultura Digital Forja.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --azul:#2c5fd6; --morado:#7b3fc4; --magenta:#d0367f; --naranja:#d9661a; --verde:#0e9488;
+  --texto:#22304f; --suave:#56627e; --fondo:#f3f1ee; --tarjeta:#ffffff; --borde:#e2ddd6;
+  --marca:linear-gradient(115deg,var(--azul) 0%,var(--morado) 28%,var(--magenta) 52%,var(--naranja) 76%,var(--verde) 100%);
+  --sombra:0 10px 30px rgba(34,48,79,.10);
+  --radio:20px;
+  --f-titulo:"Poppins",system-ui,sans-serif;
+  --f-texto:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--fondo);color:var(--texto);font-family:var(--f-texto);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-titulo);line-height:1.15;margin:0;text-wrap:balance}
+h2{font-size:clamp(26px,6vw,40px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:19px;font-weight:700}
+p{margin:0}
+.contenedor{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+section{padding:64px 0}
+.etiqueta{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--marca);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px}
+.intro{color:var(--suave);max-width:640px;margin-top:12px}
+
+/* Botones */
+.boton{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-titulo);font-weight:700;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 26px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.boton:hover{transform:translateY(-2px)}
+.boton:focus-visible,a:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
+.boton-principal{background:#fff;color:var(--texto);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.boton-marca{background:var(--marca);color:#fff;box-shadow:var(--sombra)}
+.boton svg{width:22px;height:22px}
+
+/* Barra superior */
+.barra{position:sticky;top:0;z-index:10;background:rgba(243,241,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--borde)}
+.barra .contenedor{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-titulo);font-weight:800;font-size:18px}
+.logo img,.logo .logo-svg{width:40px;height:40px;border-radius:50%;object-fit:contain}
+.menu{display:none;gap:20px;font-size:15px;font-weight:500}
+.menu a{text-decoration:none;color:var(--suave)}
+.menu a:hover{color:var(--texto)}
+.barra .boton{padding:9px 16px;font-size:14px}
+@media (min-width:900px){.menu{display:flex}}
+
+/* Inicio */
+.inicio{background:var(--marca);color:#fff;padding:56px 0 72px;position:relative;overflow:hidden}
+.inicio .contenedor{display:grid;gap:36px;align-items:center}
+.inicio h1{font-size:clamp(44px,12vw,84px);font-weight:800;letter-spacing:-.02em}
+.inicio .frase{font-size:clamp(18px,4.6vw,23px);margin:14px 0 28px;max-width:540px;opacity:.95}
+.inicio .datos{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.inicio .datos span{font-size:13px;font-weight:600;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 12px}
+.ilustracion{width:min(340px,80%);margin:0 auto}
+@media (min-width:800px){.inicio .contenedor{grid-template-columns:1.3fr 1fr}.inicio{padding:96px 0 110px}}
+
+/* Propuesta */
+.propuesta blockquote{margin:18px 0 0;padding:26px 22px;background:var(--tarjeta);border-radius:var(--radio);box-shadow:var(--sombra);font-size:clamp(17px,4.2vw,21px);line-height:1.6;position:relative;border-left:6px solid transparent;border-image:var(--marca) 1}
+.propuesta strong{color:var(--morado)}
+
+/* Catálogo */
+.rejilla{display:grid;gap:18px;margin-top:32px}
+@media (min-width:640px){.rejilla{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.rejilla.cuatro{grid-template-columns:repeat(4,1fr)}}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--borde);border-radius:var(--radio);padding:22px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--sombra)}
+.tarjeta .figura{height:120px;border-radius:14px;display:grid;place-items:center;margin-bottom:6px}
+.tarjeta .figura svg{width:84px;height:84px}
+.tarjeta p{color:var(--suave);font-size:15px}
+.precio{font-family:var(--f-titulo);font-weight:800;font-size:28px;margin-top:auto;padding-top:8px}
+.precio small{font-size:13px;font-weight:600;color:var(--suave);font-family:var(--f-texto)}
+.sello{align-self:flex-start;font-size:12px;font-weight:600;color:#fff;background:var(--marca);border-radius:999px;padding:4px 10px}
+.tarjeta.destacada{border:2px solid var(--magenta)}
+.nota{margin-top:18px;font-size:14px;color:var(--suave)}
+
+/* Pasos */
+.pasos{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:14px;counter-reset:paso}
+@media (min-width:900px){.pasos{grid-template-columns:repeat(5,1fr)}}
+.pasos li{background:var(--tarjeta);border:1px solid var(--borde);border-radius:var(--radio);padding:20px;display:flex;gap:16px;align-items:center;counter-increment:paso}
+@media (min-width:900px){.pasos li{flex-direction:column;text-align:center;align-items:center}}
+.pasos .icono{flex:none;width:60px;height:60px;border-radius:16px;display:grid;place-items:center;color:#fff}
+.pasos .icono svg{width:30px;height:30px}
+.pasos li:nth-child(1) .icono{background:var(--azul)}
+.pasos li:nth-child(2) .icono{background:var(--morado)}
+.pasos li:nth-child(3) .icono{background:var(--magenta)}
+.pasos li:nth-child(4) .icono{background:var(--naranja)}
+.pasos li:nth-child(5) .icono{background:var(--verde)}
+.pasos .num{font-size:12px;font-weight:600;color:var(--suave);letter-spacing:.06em}
+.pasos .num::before{content:"Paso " counter(paso)}
+.pasos h3{font-size:17px}
+
+/* Forja */
+.forja{background:var(--texto);color:#fff}
+.forja .etiqueta{background:linear-gradient(90deg,#ff9a55,#f06aa8);-webkit-background-clip:text;background-clip:text}
+.forja .intro{color:#c9d1e4}
+.cifras{display:grid;gap:14px;margin-top:32px}
+@media (min-width:700px){.cifras{grid-template-columns:repeat(3,1fr)}}
+.cifra{border-radius:var(--radio);padding:24px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}
+.cifra b{display:block;font-family:var(--f-titulo);font-size:44px;line-height:1;font-weight:800;background:var(--marca);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px}
+.forja .cifra b{background:linear-gradient(90deg,#ff9a55,#f06aa8 60%,#5fe0cf);-webkit-background-clip:text;background-clip:text}
+.cifra p{color:#dde3f0}
+
+/* Envíos */
+.envios .rejilla .tarjeta{flex-direction:row;align-items:flex-start;gap:16px}
+.envios .icono{flex:none;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;color:#fff}
+.envios .icono svg{width:28px;height:28px}
+.pronto{display:inline-block;font-size:12px;font-weight:600;color:var(--naranja);border:1px solid var(--naranja);border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+
+/* Contacto */
+.contacto .caja{background:var(--marca);color:#fff;border-radius:28px;padding:36px 22px;text-align:center;box-shadow:var(--sombra)}
+.contacto .caja .intro{color:#fff;opacity:.92;margin:12px auto 24px}
+.redes{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+.redes a,.redes span{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 16px}
+.redes svg{width:18px;height:18px}
+.redes span{opacity:.75}
+
+footer{padding:28px 0 40px;text-align:center;font-size:14px;color:var(--suave)}
+footer .contenedor{display:grid;gap:6px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.boton{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="contenedor">
+    <a class="logo" href="#inicio" aria-label="Arte Circular, ir al inicio">
+      <!-- Logo: sube tu archivo a assets/logo.png. Mientras no exista, se muestra el círculo SVG. -->
+      <img src="assets/logo.png" alt="Logo de Arte Circular" width="40" height="40"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <svg class="logo-svg" viewBox="0 0 40 40" style="display:none" aria-hidden="true">
+        <defs><linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2c5fd6"/><stop offset=".35" stop-color="#7b3fc4"/><stop offset=".6" stop-color="#d0367f"/><stop offset=".8" stop-color="#d9661a"/><stop offset="1" stop-color="#0e9488"/></linearGradient></defs>
+        <circle cx="20" cy="20" r="17" fill="none" stroke="url(#gl)" stroke-width="6"/>
+      </svg>
+      <span>Arte Circular</span>
+    </a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#proceso">Cómo lo hacemos</a>
+      <a href="#forja">Escuela Forja</a>
+      <a href="#envios">Envíos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="boton boton-marca js-whatsapp" href="#contacto">Pedir</a>
+  </div>
+</header>
+
+<main>
+  <!-- 1. Inicio -->
+  <section class="inicio" id="inicio">
+    <div class="contenedor">
+      <div>
+        <h1>Arte Circular</h1>
+        <p class="frase">Miniaturas de autor creadas por jóvenes del Sector Cuba, listas para jugar.</p>
+        <a class="boton boton-principal js-whatsapp" href="#contacto">
+          <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3Z"/></svg>
+          Haz tu pedido
+        </a>
+        <div class="datos">
+          <span>28 a 32 mm</span><span>Impresas en resina</span><span>Pintadas a mano</span><span>Pereira, Colombia</span>
+        </div>
+      </div>
+      <!-- Ilustración: dado d20 y figura sobre peana -->
+      <svg class="ilustracion" viewBox="0 0 300 300" aria-hidden="true">
+        <circle cx="150" cy="150" r="138" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-dasharray="6 10"/>
+        <g fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round">
+          <polygon points="150,46 232,94 232,190 150,238 68,190 68,94" fill="rgba(255,255,255,.12)"/>
+          <polygon points="150,92 196,170 104,170"/>
+          <path d="M150 46 150 92M232 94 196 170M68 94 104 170M150 238 104 170M150 238 196 170M68 190 104 170M232 190 196 170M68 94 150 92 232 94"/>
+        </g>
+        <text x="150" y="156" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="30" fill="#fff">20</text>
+        <g transform="translate(222 196)">
+          <ellipse cx="0" cy="58" rx="36" ry="10" fill="#22304f" opacity=".55"/>
+          <rect x="-36" y="46" width="72" height="12" rx="6" fill="#22304f"/>
+          <path d="M-14 46 -10 10 -20 -8 -10 -20 0 -14 10 -20 20 -8 10 10 14 46Z" fill="#fff"/>
+          <circle cx="0" cy="-30" r="10" fill="#fff"/>
+          <path d="M18 -14 34 -40" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 2. Propuesta de valor -->
+  <section class="propuesta" id="propuesta">
+    <div class="contenedor">
+      <span class="etiqueta">Propuesta de valor</span>
+      <h2>Figuras únicas para tus partidas</h2>
+      <blockquote>Para jugadores de rol y wargames que quieren figuras únicas para sus partidas, <strong>Arte Circular</strong> esculpe, imprime y pinta miniaturas de autor creadas por jóvenes del Sector Cuba, con precios claros y listas para jugar. A diferencia de las tiendas que importan y de los impresores por cotización, nosotros creamos el modelo, lo firmamos y lo enviamos a todo el país, y su archivo, a todo el mundo.</blockquote>
+    </div>
+  </section>
+
+  <!-- 3. Catálogo -->
+  <section class="catalogo" id="catalogo">
+    <div class="contenedor">
+      <span class="etiqueta">Catálogo</span>
+      <h2>Precios claros, publicados</h2>
+      <p class="intro">Miniaturas de 28 a 32 mm, la escala de los juegos de rol y de mesa.</p>
+      <div class="rejilla cuatro">
+        <article class="tarjeta">
+          <div class="figura" style="background:#e6ecfb"><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="40" cy="68" rx="22" ry="6" fill="#2c5fd6" opacity=".3"/><path d="M30 64 32 36 24 28 32 20 40 24 48 20 56 28 48 36 50 64Z" fill="none" stroke="#2c5fd6" stroke-width="3" stroke-linejoin="round"/><circle cx="40" cy="13" r="6" fill="none" stroke="#2c5fd6" stroke-width="3"/></svg></div>
+          <h3>Miniatura sin pintar</h3>
+          <p>Impresa en resina, lavada y curada, lista para que la pintes tú.</p>
+          <div class="precio js-precio" data-valor="32000"></div>
+        </article>
+        <article class="tarjeta">
+          <div class="figura" style="background:#f1e9fa"><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="40" cy="68" rx="22" ry="6" fill="#7b3fc4" opacity=".3"/><path d="M30 64 32 36 24 28 32 20 40 24 48 20 56 28 48 36 50 64Z" fill="#7b3fc4"/><circle cx="40" cy="13" r="6" fill="#d9661a"/></svg></div>
+          <h3>Miniatura pintada nivel tabletop</h3>
+          <p>Pintada a mano con acabado para mesa de juego.</p>
+          <div class="precio js-precio" data-valor="95000"></div>
+        </article>
+        <article class="tarjeta destacada">
+          <span class="sello">Edición numerada y firmada</span>
+          <div class="figura" style="background:#fbe8f0"><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="40" cy="70" rx="26" ry="6" fill="#d0367f" opacity=".3"/><path d="M14 58c6-14 16-20 26-20s20 6 26 20l-8-4-6 8-6-8-6 8-6-8-6 8-6-8Z" fill="#d0367f"/><path d="M26 38c-2-10 4-20 14-20s16 10 14 20" fill="#7b3fc4"/><path d="M28 22 22 8l12 8M52 22l6-14-12 8" fill="#d9661a"/><circle cx="34" cy="30" r="2.5" fill="#fff"/><circle cx="46" cy="30" r="2.5" fill="#fff"/></svg></div>
+          <h3>Premium de autor “Bestiario de Cuba”</h3>
+          <p>Criaturas de autor en edición numerada y firmada por el joven escultor.</p>
+          <div class="precio js-precio" data-valor="130000"></div>
+        </article>
+        <article class="tarjeta">
+          <div class="figura" style="background:#e3f4f2"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="16" y="16" width="48" height="48" rx="10" fill="none" stroke="#0e9488" stroke-width="3" stroke-dasharray="6 5"/><path d="M40 28v24M28 40h24" stroke="#0e9488" stroke-width="4" stroke-linecap="round"/></svg></div>
+          <h3>Encargos personalizados</h3>
+          <p>Tu personaje, tu criatura o tu ejército, diseñado desde cero.</p>
+          <div class="precio">A cotizar</div>
+        </article>
+      </div>
+      <p class="nota">Precios en pesos colombianos (COP) por unidad. El envío se cotiza aparte.</p>
+    </div>
+  </section>
+
+  <!-- 4. Cómo lo hacemos -->
+  <section class="proceso" id="proceso">
+    <div class="contenedor">
+      <span class="etiqueta">Cómo lo hacemos</span>
+      <h2>Del archivo digital a tu mesa</h2>
+      <ol class="pasos">
+        <li>
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M12 7l3 1.8v3.4L12 14l-3-1.8V8.8Z"/></svg></div>
+          <div><div class="num"></div><h3>Diseño digital</h3></div>
+        </li>
+        <li>
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h16v4H4zM6 7v4M18 7v4M4 21h16M8 21v-3h8v3M10 18v-4h4v4"/></svg></div>
+          <div><div class="num"></div><h3>Impresión en resina</h3></div>
+        </li>
+        <li>
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3s-4 5-4 8a4 4 0 0 0 8 0c0-3-4-8-4-8Z"/><circle cx="17" cy="14" r="3"/><path d="M17 7v2M17 19v2M22 14h-2M13.5 10.5 12.7 9.7M21.2 18.2l-.7-.7M21.2 9.8l-.7.7"/></svg></div>
+          <div><div class="num"></div><h3>Lavado y curado</h3></div>
+        </li>
+        <li>
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 3 10 13M12 15l-2-2M10 13c-3 0-5 2-5 5 0 1-1 2-2 2 3 1 7 0 8-2 1-1 1-3 1-3"/></svg></div>
+          <div><div class="num"></div><h3>Pintura a mano</h3></div>
+        </li>
+        <li>
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5Z"/><path d="M3 7.5 12 12l9-4.5M12 12v9M7.5 5.2 16.5 9.8"/></svg></div>
+          <div><div class="num"></div><h3>Empaque y envío</h3></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5. Escuela Forja -->
+  <section class="forja" id="forja">
+    <div class="contenedor">
+      <span class="etiqueta">Escuela de Escultura Digital</span>
+      <h2>Forja</h2>
+      <p class="intro">Una escuela para jóvenes del Sector Cuba, barrio Montelíbano, Pereira. Aprenden escultura digital, impresión y pintura creando las miniaturas que vendemos.</p>
+      <div class="cifras">
+        <div class="cifra"><b>8</b><p>jóvenes por ciclo de formación.</p></div>
+        <div class="cifra"><b>12</b><p>semanas dura cada ciclo.</p></div>
+        <div class="cifra"><b>50 %</b><p>de la venta de sus piezas es para cada joven, y su nombre va en el producto.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Envíos -->
+  <section class="envios" id="envios">
+    <div class="contenedor">
+      <span class="etiqueta">Envíos</span>
+      <h2>Llegamos a donde juegas</h2>
+      <div class="rejilla">
+        <div class="tarjeta">
+          <div class="icono" style="background:var(--naranja)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
+          <div><h3>Toda Colombia</h3><p>Miniaturas físicas enviadas por transportadora a cualquier ciudad del país.</p></div>
+        </div>
+        <div class="tarjeta">
+          <div class="icono" style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
+          <div><h3>Todo el mundo <span class="pronto">Próximamente</span></h3><p>Archivos digitales de nuestros modelos para imprimir en cualquier país.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Contacto -->
+  <section class="contacto" id="contacto">
+    <div class="contenedor">
+      <div class="caja">
+        <h2>Haz tu pedido</h2>
+        <p class="intro">Escríbenos por WhatsApp: cuéntanos qué miniatura quieres y te respondemos con disponibilidad y costo de envío.</p>
+        <a class="boton boton-principal js-whatsapp" href="#contacto">
+          <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3Z"/></svg>
+          Escribir por WhatsApp
+        </a>
+        <div class="redes" id="redes"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="contenedor">
+    <p>© 2026 Arte Circular – Hub Creación Vanguardista. Todos los derechos reservados.</p>
+    <p>Sector Cuba, barrio Montelíbano · Pereira, Colombia</p>
+  </div>
+</footer>
+
+<script>
+/* ===== CONFIGURACIÓN: cambia estos datos ===== */
+// Número de WhatsApp con indicativo de país, solo dígitos. Ejemplo: "573001234567"
+const WHATSAPP_NUMERO = "";
+const WHATSAPP_MENSAJE = "¡Hola, Arte Circular! Quiero hacer un pedido de miniaturas.";
+// Enlaces de redes sociales. Déjalos vacíos ("") para ocultarlos.
+const REDES = {
+  instagram: "",
+  facebook: "",
+  tiktok: "",
+  youtube: ""
+};
+/* ============================================= */
+
+// Botones de WhatsApp
+const urlWhatsapp = "https://wa.me/" + WHATSAPP_NUMERO.replace(/\D/g, "") + "?text=" + encodeURIComponent(WHATSAPP_MENSAJE);
+document.querySelectorAll(".js-whatsapp").forEach(a => {
+  a.href = urlWhatsapp;
+  a.target = "_blank";
+  a.rel = "noopener";
+});
+
+// Precios en pesos colombianos
+const cop = new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 });
+document.querySelectorAll(".js-precio").forEach(el => {
+  el.innerHTML = cop.format(Number(el.dataset.valor)) + " <small>COP</small>";
+});
+
+// Redes sociales
+const ICONOS = {
+  instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/>',
+  facebook: '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z"/>',
+  tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 3 2.5 5 5.5 5"/>',
+  youtube: '<rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/>'
+};
+const NOMBRES = { instagram: "Instagram", facebook: "Facebook", tiktok: "TikTok", youtube: "YouTube" };
+const caja = document.getElementById("redes");
+const activas = Object.entries(REDES).filter(([, url]) => url.trim() !== "");
+if (activas.length === 0) {
+  caja.innerHTML = "<span>Redes sociales próximamente</span>";
+} else {
+  activas.forEach(([red, url]) => {
+    const a = document.createElement("a");
+    a.href = url; a.target = "_blank"; a.rel = "noopener";
+    a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONOS[red] + "</svg>" + NOMBRES[red];
+    caja.appendChild(a);
+  });
+}
+</script>
+</body>
+</html>
